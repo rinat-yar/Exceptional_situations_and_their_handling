@@ -8,9 +8,9 @@ import ru.netogia.ShopRepository;
 
 public class ShopRepositoryTest {
 
-    Product item1 = new Product (1, "хлеб", 50);
-    Product item2 = new Product (5, "Мясо",300 );
-    Product item3 = new Product (38,"Сыр", 220);
+    Product item1 = new Product(1, "хлеб", 50);
+    Product item2 = new Product(5, "Мясо", 300);
+    Product item3 = new Product(38, "Сыр", 220);
 
     @Test
     public void testRemoveExisting() {
@@ -24,7 +24,7 @@ public class ShopRepositoryTest {
         Product[] expected = {item1, item3};
         Product[] actual = shop.findAll();
 
-        Assertions.assertArrayEquals(expected,actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class ShopRepositoryTest {
         shop.add(item3);
 
         Assertions.assertThrows(NotFoundException.class,
-        () -> shop.remove(44)
+                () -> shop.remove(44)
         );
     }
 }

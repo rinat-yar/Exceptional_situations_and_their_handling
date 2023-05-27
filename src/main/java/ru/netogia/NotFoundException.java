@@ -1,8 +1,8 @@
 package ru.netogia;
 
-public class NotFoundException extends RuntimeException{
+public class NotFoundException extends RuntimeException {
 
     public NotFoundException(int id) {
-        super("Товар с id "  + id + " Не найден");
+        super("Товар с id " + id + " Не найден");
     }
 }

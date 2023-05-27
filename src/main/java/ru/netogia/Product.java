@@ -28,6 +28,7 @@ public class Product {
     public int hashCode() {
         return Objects.hash(id, title, price);
     }
+
     public int getId() {
         return id;
     }
